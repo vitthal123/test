@@ -1,0 +1,16 @@
+create user my_user identified by my_user;
+
+grant create session,create table,create sequence to my_user;
+
+------------------------------------------------------
+ALTER USER my_user
+DEFAULT TABLESPACE users
+QUOTA 10M on users;
+------------------------------------------------------
+
+
+
+
+ALTER USER test_user
+DEFAULT TABLESPACE users
+QUOTA 10M on users;
